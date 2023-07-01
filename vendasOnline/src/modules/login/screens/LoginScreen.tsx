@@ -1,9 +1,11 @@
-import { BackgroundImage } from '../styles/loginScreen.styles';
+import { SecondLogin } from '../styles/loginScreen.styles';
 
 const LoginScreen = () => {
   return (
     <>
-      <BackgroundImage src="./background.jpg" />
+      <div>
+        <SecondLogin />
+      </div>
     </>
   );
 };
