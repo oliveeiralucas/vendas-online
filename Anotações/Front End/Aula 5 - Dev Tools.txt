@@ -1,0 +1,27 @@
+Para acessar a dev tools, voce pode aperta f12 ou clicar com o botão direito e ir em inspecionar.
+
+Dentro do dev tools voce tem controle total sobre o que esta ocorrendo na sua aplicação, nele voce consegue ver o que esta acontecendo, editar e visualizar em tempo real as alterações.
+
+
+console:
+-é um terminal do js
+-mostra os erros que esta ocorrendo no projeto
+-debugar o código
+
+
+source:
+-onde voce vai debugar o seu projeto
+-ctrl+p voce consegue acessar os js dos arquivos
+-colocar breakpoints (para ver o que esta ocorrendo no código até aquele ponto)
+
+
+network:
+-tudo o que acontece de requisições passa pelo network
+-ver a velocidade do site
+-simular conexões de internet de alta latencia
+-ver os payloads e as requests
+-simular requisições juntamente com o curl
+
+
+application:
+-visualizar e salvar dados da aplicação (local storage)(banco de dados)...

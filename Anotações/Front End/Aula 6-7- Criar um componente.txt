@@ -1,0 +1,19 @@
+Dentro de um projeto convem se criar algumas pastas
+
+-storage
+-modules
+-shared
+
+dentro do mudules voce coloca os componentes como a tela de login por exemplo
+
+
+dentro de cada pasta de componente convem se criar:
+-components 
+-styles
+-screens
+-index.ts (indica qual o arquivo principal)
+
+
+A vantagem de deixar uma imagem em public é que quando voce enviar o bundle pro cliente, ele ira receber um pacote mais slin e a imagem so ira carregar quando requisitada
+
+----------------------

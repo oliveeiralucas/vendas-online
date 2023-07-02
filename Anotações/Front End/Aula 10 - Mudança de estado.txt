@@ -1,0 +1,21 @@
+A mudança de estado é um conceito fundamental em programação e permite que um componente em um aplicativo React atualize e exiba diferentes informações ou comportamentos com base em determinadas condições ou eventos.
+
+
+
+para fazer isso em react basta seguir o passo a passo:
+
+Passo 1: Importe a função useState do pacote react:
+
+Passo 2: Crie o componente que irá utilizar a função
+
+Passo 3: Declare o estado inicial e a função para atualizá-lo usando o useState
+  const [username, setUsername] = useState('');
+
+Passo 4: Crie a função para lidar com a mudança de estado
+  const handleUsername = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setUsername(event.target.value);
+  };
+
+
+Passo 5: reenderize o componente e altere os valores necessários com base nos estados criados
+

@@ -1,0 +1,33 @@
+Esse projeto utilizará
+
+- Vite (criação da estrutura react)
+- TypeScript (linguagem de código)
+- AntD
+- Styled Components
+- Figma
+- Eslint (formatação de código)
+- Prettier (formatação de código)
+- Axios
+- React Router
+- Use Context
+- Redux
+- React test library com o Jest
+
+
+
+---------------------
+
+Instalação Eslint:
+npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-plugin-import eslint-plugin-prettier eslint-plugin-react eslint-plugin-simple-import-sort pre-commit prettier
+
+criar arquivos:
+.prettierrc.js
+.eslintrc.js
+
+no node modules retirar 'modules' e private
+
+
+configurar o arquivo prettierrc.js de acordo com as suas preferencias
+
+---------------------------------
+Instalar Antd e styled components

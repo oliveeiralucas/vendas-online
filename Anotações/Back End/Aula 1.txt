@@ -1,0 +1,2 @@
+Para criar a aplicação Backend voce basicamente precisará criar as rotas, os controlers e o seu banco de dados
+

@@ -1,0 +1,48 @@
+-------------------------------
+Estrutura do arquivo:
+
+
+src:
+-local que voce insere o código fonte da sua aplicação (componentes, paginas, estilos, utilitarios)
+
+index:
+-que é o que exibimos na tela do usuário
+
+public:
+-pasta que fica público junto com o index html, pode ser acessado via url
+
+node modules:
+-módulos e bibliotecas que a gente baixa
+
+-------------------------------
+Componentes:
+
+
+Dentro do react voce trabalha com componentes, os componentes sao reutilizaveis e personalizados
+
+
+Dentro dos componentes voce pode passar propriedades para as funcoes dos componentes atraves do props
+
+function Greeting(props) {
+  return (
+     {props.name}
+ );
+}
+
+dessa forma ao reenderizar o componente voce podera passar essa propriedade a ele
+
+<Greeting name="John" />
+
+-------------------------------
+Extensão de arquivo:
+
+é interessante na estrutura de um projeto separar:
+-.js (funções)
+-.jsx (componentes)
+
+-------------------------------
+Importação: 
+
+Na importação de componentes a {} serve para importar um elemento específico dentro de um componente
+
+Já o import sem chaves (default), importa o componente inteiro
