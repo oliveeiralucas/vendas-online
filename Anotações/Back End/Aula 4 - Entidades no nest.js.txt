@@ -1,0 +1,26 @@
+
+No contexto do TypeORM, uma entidade (entity) é uma classe que representa uma tabela em um banco de dados relacional. Cada instância da classe corresponde a uma linha (registro) nessa tabela. A entidade é usada para mapear e definir a estrutura da tabela, bem como as relações com outras tabelas.
+
+
+import { Column, Entity, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
+
+@Entity({ name:'user' })
+export class UserEntity {
+  @PrimaryGeneratedColumn('rowid')
+  id: number;
+
+  @Column({ name: 'name', nullable: false })
+  name: string;
+
+  @Column({ name: 'email', nullable: false })
+  email: string;
+
+  @Column({ name: 'phone' })
+  phone: string;
+
+  @Column({ name: 'cpf', nullable: false })
+  cpf: string;
+
+  @Column({ name: 'password', nullable: false })
+  password: string;
+}

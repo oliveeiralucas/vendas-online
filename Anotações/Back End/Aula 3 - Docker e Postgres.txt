@@ -1,0 +1,18 @@
+para esse projeto vamos utilizar o docker
+
+Em resumo, o Docker simplifica o processo de empacotar, distribuir e executar aplicativos, tornando-os portáteis, escaláveis e eficientes. Ele é amplamente utilizado no desenvolvimento de software, implantação de aplicativos em nuvem, orquestração de contêineres e criação de ambientes de desenvolvimento consistentes.
+
+
+Além disso como ferramenta para o gerenciamento de banco de dados, vamos utilizar o postgres juntamente com o pgadmin
+
+---------------------
+
+para criar um novo container com um banco de dados postgres no docker voce deve digitar o seguinte comando
+
+docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres
+
+
+depois de instalar o projeto voce precisa criar o arquivo .env para a configuração do banco de dados
+
+
+depois disso é necessário realizar a 

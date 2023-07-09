@@ -1,0 +1,21 @@
+Verbos de requisção:
+
+Get: buscar dados do usuário
+Post: enviar dados/salvar dados
+Put: editar, modificar os dados
+Patch: editar mas sem a necessidade de passar todos os dados
+Delete: deletar
+
+
+---------------------------
+
+DTO: Quando um usuário envia uma solicitação para a API, ele cria uma DTO (Data Transfer Object).
+
+ A DTO inclui informações (dados de entrada, nome de usuário e senha)
+
+
+Interfaces: São as rotas permitidas para que os usuários façam certas ações
+
+
+Controller: é onde voce colocar o que as rotas irão retornar
+
