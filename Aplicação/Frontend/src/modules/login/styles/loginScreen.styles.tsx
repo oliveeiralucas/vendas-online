@@ -1,7 +1,35 @@
+import axios from 'axios';
+import { useState } from 'react';
+
 import Button from '../../../shared/buttons/button/button';
 import { InputEmail, InputPassword } from '../../../shared/inputs/inputDefault/input';
 
 export const SecondLogin = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = async () => {
+    const returnObject = await axios({
+      method: 'post',
+      url: 'http://localhost:8080/auth',
+      data: {
+        email: email,
+        password: password,
+      },
+    })
+      .then((result) => {
+        alert('fez login');
+        return result;
+      })
+      .catch(() => {
+        alert('usuário ou senha inválidos');
+      });
+
+    console.log(`returnObject: ${JSON.stringify(returnObject)}`);
+    console.log(`email: ${email}, password: ${password}`);
+    // para teste apagar depois
+  };
+
   return (
     <>
       <div className="bg-gray-900 flex h-screen flex-1 flex-col justify-center overflow-hidden">
@@ -16,7 +44,7 @@ export const SecondLogin = () => {
                 Usuário
               </label>
               <div className="mt-2">
-                <InputEmail />
+                <InputEmail onChangeEmail={setEmail} />
               </div>
             </div>
 
@@ -35,12 +63,12 @@ export const SecondLogin = () => {
                 </div>
               </div>
               <div className="mt-2">
-                <InputPassword />
+                <InputPassword onChangePassword={setPassword} />
               </div>
             </div>
 
             <div>
-              <Button />
+              <Button onClick={handleLogin} />
             </div>
           </form>
 
