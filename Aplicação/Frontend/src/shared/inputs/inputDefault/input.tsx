@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import CustomInput from './input.styles';
 
 interface inputPasswordProps {

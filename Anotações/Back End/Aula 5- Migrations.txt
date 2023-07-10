@@ -10,3 +10,6 @@ npx typeorm migration:create ./src/migration/create_table_user
 dentro da migration existem 2 estados o up e o down
 
 o down funciona como se fosse uma destruição do que foi feito, enquanto o up construi
+
+
+Depois de criar as migrations, voce deve criar os controller, entitys, modules e serviços
