@@ -1,0 +1,1 @@
+O Axios é uma biblioteca JavaScript popular utilizada para fazer requisições de rede e manipular solicitações e respostas HTTP
