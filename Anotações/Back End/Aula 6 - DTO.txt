@@ -1,0 +1,7 @@
+Quando se cria um banco de dados é necessário passar varias informações para que seja consultada futuramente caso precise
+
+no entanto nem sempre é necessário acessar todas as informações de uma vez
+
+por isso é uma boa pratica criar um dto para armazenar as informações principais
+
+no nest se pode fazer isso utilizando dos pipes
