@@ -19,7 +19,6 @@ import { CacheModule } from './cache/cache.module';
       password: process.env.DB_PASSWORD,
       username: process.env.DB_USERNAME,
       port: Number(process.env.DB_PORT),
-      synchronize: true,
       entities: [`${__dirname}/**/*.entity.{js,ts}`],
       migrations: [`${__dirname}/migration/*.js`, `${__dirname}/migration/*.ts`],
       migrationsRun: true,
