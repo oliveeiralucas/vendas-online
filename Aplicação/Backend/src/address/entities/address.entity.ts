@@ -1,8 +1,8 @@
 import {
   Column,
+  CreateDateColumn,
   Entity,
   PrimaryGeneratedColumn,
-  CreateDateColumn,
   UpdateDateColumn,
 } from 'typeorm';
 
@@ -12,13 +12,13 @@ export class AddressEntity {
   id: number;
 
   @Column({ name: 'user_id', nullable: false })
-  userID: number;
+  userId: number;
 
   @Column({ name: 'complement', nullable: true })
   complement: string;
 
-  @Column({ name: 'number', nullable: true })
-  numberAddress: string;
+  @Column({ name: 'number', nullable: false })
+  numberAddress: number;
 
   @Column({ name: 'cep', nullable: false })
   cep: string;
