@@ -1,0 +1,20 @@
+dto - transferencia de dados
+
+entity - banco de dados
+
+controller - requisições https
+
+service - como as requisições irao acontecer
+
+-----------------------
+
+ManyToOne:
+
+A relação ManyToOne é usada quando muitas instâncias de uma entidade estão associadas a uma única instância de outra entidade. Por exemplo, se você tem uma entidade "Pedido" e uma entidade "Cliente", um cliente pode ter muitos pedidos, mas cada pedido está associado a apenas um cliente. Isso é uma relação ManyToOne.
+
+--------------------------
+
+JWT:
+
+JWTs são comumente usados para autenticação e autorização. Em um cenário típico de autenticação, o usuário entra com suas credenciais, o servidor as verifica e, em seguida, o servidor gera um JWT que é enviado de volta ao cliente. O cliente pode então usar este JWT para provar que é autenticado em todas as solicitações subsequentes ao servidor.
+
