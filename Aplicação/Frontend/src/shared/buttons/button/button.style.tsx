@@ -5,7 +5,7 @@ interface MyButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   content?: string;
 }
 
-export const MyButton = (props: MyButtonProps) => {
+export const MyButtonLogin = (props: MyButtonProps) => {
   const { custom, content, ...otherProps } = props;
   return (
     <button className={`${custom}`} {...otherProps}>
