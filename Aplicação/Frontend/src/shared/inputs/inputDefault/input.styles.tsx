@@ -1,5 +1,6 @@
 import { InputHTMLAttributes } from 'react';
 
+//Input Comum
 interface MyProps extends InputHTMLAttributes<HTMLInputElement> {
   custom?: string;
 }
