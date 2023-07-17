@@ -2,13 +2,14 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-// import { useGlobalContext } from '../../../shared/hooks/userGlobalContext';
+import { setItemStorage } from '../../../shared/functions/connection/storageProxy';
+import { useGlobalContext } from '../../../shared/hooks/userGlobalContext';
 import CustomInput from '../../../shared/inputs/inputDefault/input.styles';
 
 export const SecondLogin = () => {
   const navigate = useNavigate();
 
-  // const { accessToken, setAccessToken } = useGlobalContext();
+  const { accessToken, setAccessToken } = useGlobalContext();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -24,6 +25,9 @@ export const SecondLogin = () => {
       },
     })
       .then((result) => {
+        setItemStorage('accessToken', result.data.accessToken);
+
+        setAccessToken(result.data.accessToken);
         setError(null);
         navigate('/');
         return result;
