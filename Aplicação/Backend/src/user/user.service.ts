@@ -70,4 +70,46 @@ export class UserService {
 
     return user;
   }
+
+  validateCPF(cpf: string): boolean {
+    cpf = cpf.replace(/[^\d]+/g, ''); // Remove caracteres não numéricos
+
+    if (cpf.length !== 11) {
+      return false;
+    }
+
+    // Verifica se todos os dígitos são iguais (caso inválido)
+    const firstDigit = cpf.charAt(0);
+    if (cpf.split('').every((char) => char === firstDigit)) {
+      return false;
+    }
+
+    // Calcula o primeiro dígito verificador
+    let sum = 0;
+    for (let i = 0; i < 9; i++) {
+      sum += parseInt(cpf.charAt(i)) * (10 - i);
+    }
+    let remainder = 11 - (sum % 11);
+    if (remainder === 10 || remainder === 11) {
+      remainder = 0;
+    }
+    if (remainder !== parseInt(cpf.charAt(9))) {
+      return false;
+    }
+
+    // Calcula o segundo dígito verificador
+    sum = 0;
+    for (let i = 0; i < 10; i++) {
+      sum += parseInt(cpf.charAt(i)) * (11 - i);
+    }
+    remainder = 11 - (sum % 11);
+    if (remainder === 10 || remainder === 11) {
+      remainder = 0;
+    }
+    if (remainder !== parseInt(cpf.charAt(10))) {
+      return false;
+    }
+
+    return true;
+  }
 }
