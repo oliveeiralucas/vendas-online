@@ -1,23 +1,11 @@
+import FooterComponent from '../components/homePage/footer.component';
+import HeaderComponent from '../components/homePage/header.component';
+
 const HomePageStyles = () => {
   return (
     <>
-      <div className="bg-gray-900 text-white">
-        {/* Cabeçalho */}
-        <header className="flex justify-between p-6">
-          <div className="font-bold text-indigo-600 text-2xl">Logo</div>
-          <div>
-            <input className="rounded p-2" type="search" placeholder="Buscar produtos..." />
-          </div>
-          <nav>
-            <a className="p-2 text-lg" href="/carrinho">
-              Carrinho
-            </a>
-            <a className="p-2 text-lg" href="/conta">
-              Conta
-            </a>
-          </nav>
-        </header>
-
+      <div className="bg-gray-900 text-white flex flex-col min-h-screen p-4 sm:p-6 lg:p-8 overflow-auto justify-center items-center">
+        <HeaderComponent />
         {/* Carrossel */}
         <section className="p-6">
           {/* Implemente seu carrossel aqui */}
@@ -57,27 +45,7 @@ const HomePageStyles = () => {
         </section>
 
         {/* Rodapé */}
-        <footer className="p-6 bg-gray-800">
-          <div className="flex justify-between">
-            <div>
-              <a className="p-2 text-lg" href="/sobre">
-                Sobre Nós
-              </a>
-              <a className="p-2 text-lg" href="/contato">
-                Contato
-              </a>
-            </div>
-            <div className="font-bold text-indigo-600 text-2xl">Logo</div>
-            <div>
-              <a className="p-2 text-lg" href="/privacidade">
-                Política de Privacidade
-              </a>
-              <a className="p-2 text-lg" href="/termos">
-                Termos e Condições
-              </a>
-            </div>
-          </div>
-        </footer>
+        <FooterComponent />
       </div>
     </>
   );
