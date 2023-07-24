@@ -33,14 +33,7 @@ const RegisterScreenStyle = () => {
 
       return result;
     } catch (error) {
-      if (error instanceof HttpException) {
-        // Aqui você pode acessar as mensagens de erro lançadas pela exceção BadRequestException.
-        // Por exemplo, se você estiver usando a biblioteca class-validator, as mensagens de erro estarão disponíveis em error.response.message.errors
-        setError(error.response.message);
-      } else {
-        // Outros erros inesperados podem ser tratados aqui.
-        setError('Erro desconhecido');
-      }
+      setError('Preencha todos os campos');
       throw error;
     }
   };
@@ -52,7 +45,7 @@ const RegisterScreenStyle = () => {
           <div className="md:w-1/2 shadow-lg one items-center flex">
             <img src="/login.svg" alt="Imagem login" />
           </div>
-          <div className="w-full h-full md:w-1/2 md:py-16 bg-[#1b1b1b] text-white flex flex-col justify-center rounded-md">
+          <div className="w-full h-full md:w-1/2 py-16 bg-[#1b1b1b] text-white flex flex-col justify-center rounded-md">
             <h2 className="text-2xl font-semibold md:text-3xl mb-8 md:mt-2 pt-[40px] md:pt-0">
               Cadastrar nova conta
             </h2>
